@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipogafías unidades relativas</title>
+    <style>
+        html{
+            font-size: 8px;
+        }
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: aliceblue;
+            font-size: 1.6rem;
+        }
+        h1{
+            font-size: 3.5rem;
+            border-bottom: 3px solid blue;
+            color: blue;
+        }
+        h2{
+            font-size: 2.5rem;
+            color: rgb(127, 127, 235);
+        }
+        .padre{
+            font-size: 2rem;
+            margin: 20px;
+            padding: 1rem;
+            border: 1px solid rgb(100, 100, 100);
+            background-color: #e8f8f5;
+        }
+        .hijo{
+            font-size: 1.2rem;
+            padding: 0.8rem;
+            border: 1px dashed greenyellow;
+        }
+        .nivel1{
+            font-size: 2rem;
+            margin-bottom: 20px;
+            padding: 1rem;
+            border: 1px solid red;
+            background-color: bisque;
+            margin-top: 1rem;
+        }
+        .nivel2{
+            font-size: 0.8em;
+            padding: 1.5em;
+            border: 1px dashed black;
+            margin-top: 1em
+        }
+        .nivel3{
+            font-size: 1.2em;
+            padding: 0.5em;
+            background-color: rgb(153, 71, 229);
+            margin-top: 1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Experimento con unidades de tipografía relativas</h1>
+    <div class="padre">
+        <h2>Unidad rem</h2>
+        <p>Contenedor padre</p>
+        <div class="hijo">
+            Elemento hijo. <br>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta voluptate, sed, eveniet illum iste dolorum libero nam repellat sint magnam nihil quisquam doloremque placeat inventore et voluptas debitis modi ab?
+        </div>
+    </div>
+    <div class="nivel1">
+        <h2>Efecto cascada</h2>
+        <p>
+            Nivel 1. Contenedor padre font-size 2 rem (32px)
+        </p>
+        <div class="nivel2">
+            <p>
+                Nivel 2. Contendor hijo font-size 1.6 rem ()
+            </p>
+            <div class="nivel3">
+                <p>
+                    nivel 3. Contendor nieto 1.2
+                </p>
+            </div>
+        </div>
+    </div>
+    <div>
+
+    </div>
+</body>
+</html>
