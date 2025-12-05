@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .flotar{
+            height: 300px;
+            width: 300px;
+            border: 1px solid blue;
+            margin: 10px;
+            float: left;
+            font-size: 30px;
+        }
+        .normal{
+            height: 200px;
+            background-color: rgb(235, 165, 79);
+        }
+        .normal1{
+            height: 200px;
+            background-color: blueviolet;
+        }
+        .limpiar{
+            clear: both;
+        }
+        .contenedor{
+            width: 80%;
+            height: 320px;
+            margin: 0% auto;
+            border: 1px solid blue;
+            background-color: aqua;
+        }
+        .primera{
+            width: 20%;
+            margin-left: 45px; 
+        }
+        .segunda{
+            width: 50%;
+        }
+        .tercera{
+            width: 20%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="normal"></div>
+    <div class="contenedor">
+        <div class="flotar primera">1</div>
+        <div class="flotar segunda">2</div>
+        <div class="flotar tercera">3</div>
+    </div>
+    <div class="normal1 limpiar"></div>
+</body>
+</html>
