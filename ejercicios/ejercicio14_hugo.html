@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hugo | Hugo Nightfall</title>
+    <link rel="stylesheet" href="..\002_estiloshugo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            color: white;
+        }
+        body{
+            font-family: sans-serif;
+            font-size: 25px;
+            background-color: #292a2d;
+        }
+        header{
+            font-family: 'Fira Mono';
+            height: 10vh;
+            display: flex;
+            background-color: #252627;
+            justify-content: space-around;
+            align-items: center;
+        }
+        header div{
+            padding: 1rem;
+        }
+        header div a{
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        h1{
+            font-family: 'Fira Mono';
+        }
+        .portada_inicio{
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            gap: 3rem;
+        }
+        .portada_inicio div ul li{
+            font-size: 1rem;
+            display: inline-block;
+        }
+        footer{
+            height: 10vh;
+            background-color: #252627;
+            text-align: center;
+            justify-content: end;
+          
+        }
+        footer p{
+            padding-top: 1.5rem; 
+            font-size: 1rem;
+            font-family: sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <a href="https://hugo-theme-nightfall.netlify.app/">hello@gohugo.io ~ $</a>
+        </div>
+        <div>
+            <a href="https://hugo-theme-nightfall.netlify.app/about">~/about</a>
+            <a href="https://hugo-theme-nightfall.netlify.app/blog">~/blog</a>
+        </div>
+    </header>
+    <main class="portada_inicio">
+        <div>
+            <h1>Hugo Nightfall</h1>
+        </div>
+        <div>
+            <ul>
+                <li><a href="https://github.com/gohugoio">github</a></li>
+                <li><a href="https://www.example.com/">twitter</a></li>
+                <li><a href="https://www.example.com/">linkedin</a></li>
+                <li><a href="mailto:email@example.com">email</a></li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <p>© 2025 Hugo Nightfall, Built with Hugo and Nightfall theme</p>
+    </footer>
+</body>
+</html>

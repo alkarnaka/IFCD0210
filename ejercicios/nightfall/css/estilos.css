@@ -1,0 +1,96 @@
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            color: white;
+        }
+        body{
+            font-family: sans-serif;
+            font-size: 25px;
+            background-color: #292a2d;
+        }
+        header{
+            font-family: 'Fira Mono';
+            height: 10vh;
+            display: flex;
+            background-color: #252627;
+            justify-content: space-around;
+            align-items: center;
+        }
+        header div{
+            padding: 1rem;
+        }
+        header div a{
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        h1{
+            font-family: 'Fira Mono';
+        }
+        .portada_inicio{
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            gap: 3rem;
+        }
+        .portada_inicio div ul li{
+            font-size: 1rem;
+            display: inline-block;
+        
+        }
+        .portada_inicio ul li a:hover{
+            text-decoration: underline;
+        }
+
+        footer{
+            height: 10vh;
+            background-color: #252627;
+            text-align: center;
+            justify-content: end;
+          
+        }
+        footer p{
+            padding-top: 1.5rem; 
+            font-size: 1rem;
+            font-family: sans-serif;
+            text-align: center;
+        }
+        .about{
+            width: 50vw;
+            padding-left: 25vw;
+            padding-top: 2.5rem;
+            font-size: 1rem;
+        }
+        h2{
+            font-family: 'Fira Mono';
+            padding-bottom: 2rem;
+        }
+                .about a{
+            color: #80aadd;
+        }
+        .about div p{
+            margin-top: 1rem;
+        }
+        .about div ul{
+            margin-top: 1rem;
+            margin-left: 2rem;
+        }
+        .caja{
+            font-family: 'Fira Mono';
+            font-weight: 150;
+            background-color: #252627;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            padding-left: 0.5rem;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+        .caja div{
+            display: inline-block;
+        }
+        .cuerpo{
+            margin-bottom: 1rem;
+        }
