@@ -64,11 +64,21 @@
             padding-top: 2.5rem;
             font-size: 1rem;
         }
+        .blog{
+            width: 50vw;
+            padding-left: 25vw;
+            padding-top: 1rem;
+            font-size: 1rem;
+        }
+        .blog h2{
+            font-size: 2rem;
+            margin-bottom: 0;
+        }
         h2{
             font-family: 'Fira Mono';
             padding-bottom: 2rem;
         }
-                .about a{
+        .about a{
             color: #80aadd;
         }
         .about div p{
@@ -88,9 +98,40 @@
             padding-top: 1.5rem;
             padding-bottom: 1.5rem;
         }
+        .cajapost{
+         
+            font-weight: 150;
+            background-color: #2f2f2f;
+            margin-bottom: 1rem;
+            padding-right: 1rem;
+            padding-left: 1.5rem;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;            
+        }
+        .postitu{
+            display: flex;
+            justify-content: space-between;
+
+        }
+        .titulo{
+            font-family: 'Fira Mono';
+            color: #80aadd;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
         .caja div{
             display: inline-block;
         }
         .cuerpo{
             margin-bottom: 1rem;
+        }
+        .navigation{
+            text-align: center;
+        }
+        .navigation a{
+            color: #80aadd;;
+        }
+        .reading{
+            margin: 0;
+            padding: 0;
         }
