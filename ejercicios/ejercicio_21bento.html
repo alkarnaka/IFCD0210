@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercico Bento</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            font-size: 16px;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            background-color: rgb(255, 255, 255);
+            justify-content: center;
+        }
+        .contenedor{
+            padding: 1rem;
+            background-color: black;
+            margin: 0 auto;
+            width: 70%;
+            min-height: 80vh;
+            border-radius: 20px;
+            gap: 0.5rem;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-areas:
+                "primera primera primera primera primera primera primera segunda segunda segunda segunda segunda"
+                "primera primera primera primera primera primera primera segunda segunda segunda segunda segunda"
+                "primera primera primera primera primera primera primera segunda segunda segunda segunda segunda"
+               "tercera tercera tercera cuarta cuarta cuarta cuarta quinta quinta quinta quinta quinta"
+               "tercera tercera tercera cuarta cuarta cuarta cuarta quinta quinta quinta quinta quinta"
+               "tercera tercera tercera cuarta cuarta cuarta cuarta quinta quinta quinta quinta quinta"
+               "tercera tercera tercera cuarta cuarta cuarta cuarta quinta quinta quinta quinta quinta"
+               "tercera tercera tercera septima septima septima septima quinta quinta quinta quinta quinta"
+               "sexta sexta sexta septima septima septima septima quinta quinta quinta quinta quinta"
+               "sexta sexta sexta septima septima septima septima quinta quinta quinta quinta quinta"
+               "sexta sexta sexta septima septima septima septima quinta quinta quinta quinta quinta"
+        }
+        .casillas{
+            border-radius: 20px;
+            background-color: rgb(196, 38, 38);
+        }
+        img{
+            border-radius: 20px;
+            height: 100%;
+            width: 100%;
+        }
+        .primera{
+            grid-area: primera;
+        }
+        .segunda{
+            grid-area: segunda;
+        }
+        .tercera{
+            grid-area: tercera;
+        }
+        .cuarta{
+            grid-area: cuarta;
+        }
+        .quinta{
+            grid-area: quinta;
+        }   
+        .sexta{
+            grid-area: sexta;
+        }
+        .septima{
+            grid-area: septima;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="casillas primera">
+            <img src="..\ejercicios\img_bento\primera.jpg" alt="">
+        </div>
+        <div class="casillas segunda">
+            <img src="..\ejercicios\img_bento\segunda.jpg" alt="">
+        </div>
+        <div class="casillas tercera">
+            <img src="..\ejercicios\img_bento\tercera.jpg" alt="">
+        </div>
+        <div class="casillas cuarta">
+            <img src="..\ejercicios\img_bento\cuerta.jpg" alt="">
+        </div>
+        <div class="casillas quinta">
+            <img src="..\ejercicios\img_bento\quinta.jpg" alt="">
+        </div>
+        <div class="casillas sexta">
+            <img src="..\ejercicios\img_bento\sexta.jpg" alt="">
+        </div>
+        <div class="casillas septima">
+            <img src="..\ejercicios\img_bento\septima.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>

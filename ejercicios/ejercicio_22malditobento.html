@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            html{
+                font-size: 16px;
+            }
+            body{
+                height: 100vh;
+                width: 100vw;
+                background-color: rgb(255, 255, 255);
+                justify-content: center;
+            }
+            .container {  
+                margin: 2rem auto;
+                width: 55vw;
+                min-height: 80vh;
+                display: grid;
+                grid-template-columns: 1.5fr 0.3fr 0.3fr 0.3fr 0.3fr 0.3fr 0.3fr 1.5fr;
+                grid-template-rows: 1.8fr 0.3fr 0.3fr 0.3fr 0.3fr 0.3fr 0.3fr 1.8fr;
+                gap: 1.5rem;
+                grid-auto-flow: row;
+                grid-template-areas:
+                 "uno dos dos dos tres tres tres cuatro"
+                 "cinco seis seis seis seis seis seis cuatro"
+                 "cinco seis seis seis seis seis seis cuatro"
+                 "cinco seis seis seis seis seis seis siete"
+                 "cinco seis seis seis seis seis seis siete"
+                 "cinco seis seis seis seis seis seis siete"
+                 "cinco seis seis seis seis seis seis siete"
+                 "ocho ocho ocho nueve nueve nueve nueve siete";
+            }
+            .item{
+                border: 2px solid black;
+                border-radius: 64px;
+            }
+            .uno { grid-area: uno; }
+
+            .dos { grid-area: dos; }
+
+            .tres { grid-area: tres; }
+
+            .cuatro { grid-area: cuatro; }
+
+            .cinco { grid-area: cinco; }
+
+            .seis { grid-area: seis; }
+
+            .siete { grid-area: siete; }
+
+            .ocho { grid-area: ocho; }
+
+            .nueve { grid-area: nueve; }
+
+         </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item uno"></div>
+        <div class="item dos"></div>
+        <div class="item tres"></div>
+        <div class="item cuatro"></div>
+        <div class="item cinco"></div>
+        <div class="item seis"></div>
+        <div class="item siete"></div>
+        <div class="item ocho"></div>
+        <div class="item nueve"></div>
+    </div>
+</body>
+</html>
