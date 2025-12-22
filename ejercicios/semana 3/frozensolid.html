@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        html{
+            scroll-behavior: smooth;
+               
+        }
+        body{
+            font-family: Raleway, sans-serif;
+        
+            font-size: 16px;
+            background-color: #21282d;
+        }
+        main{
+            padding-top: 65px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        h2{
+            font-size: 8.5rem;
+            margin-top: 20px;
+        }
+        h3{
+            font-size: 3rem;
+            margin-top: 4rem;
+        }
+        h4{
+            font-size: 2.5rem;
+            margin-top: 2rem;
+        }
+        footer{
+            padding-top: 2.8vh;
+            width: 100%;
+            height: 15vh;
+            color: white;
+            text-align: center;
+            background-color: #1a1a1e;
+        }
+        a{  
+            color: white;
+            text-decoration: none;
+        }
+        button{
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: .5rem;
+            font-size: 4rem;
+            background-color: rgba(128, 128, 128, 0.349);
+            border: none;
+            color: #1d1e1e;
+            z-index: 200;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+        }
+        iframe{
+            margin-top: 2.5rem;
+            margin-bottom: 2.5rem;
+            margin-right: 4rem;
+        }
+        .tarjeta{
+            width: 100%;
+            margin: 0 auto;
+            padding: 70px;
+            margin-bottom: 15px;
+            z-index: 100;
+        }
+        .tarjeta p{
+            font-size: 2.5rem;
+            margin-top: 2.5rem;
+        }
+        .uno{
+            background-color: #e0e0e0;
+            background-image: url('https://res.cloudinary.com/frozen-solid-designs/image/upload/dpr_1.0,f_auto,q_auto:best/v1641075851/seigaiha_ykdj2f.png');
+        }
+        .dos{
+            background-color: #41d1eb;
+        }
+        .tres{
+            background-color: #e0e0e0;
+            background-image: url('https://res.cloudinary.com/frozen-solid-designs/image/upload/f_auto,q_auto:best/v1641075851/crossword_qr1ieh.png');
+        }
+        .cuatro{
+            background-color: #29292d;    
+            background-image: url('https://res.cloudinary.com/frozen-solid-designs/image/upload/dpr_1.0,f_auto,q_auto:best/v1641075850/prism_ly2ugg.png');
+        }
+        .navbar{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 67px;
+            background-color:#29292d;
+            color: white;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            font-size: 2rem;
+            align-items: center;
+            z-index: 200;
+        }
+        .navbar span{
+            margin: 0 20px;
+        }
+        .navbar a{
+            color: white;
+            text-decoration: none;
+        }
+        .cierre{
+            font-size: 3rem;
+            text-decoration: none;
+        }
+        .Policy{
+            margin-top: 2.5rem;
+            margin-right: 1rem;
+            padding: 0.6rem;
+            border-radius: 3px;
+            float: right;
+            background-color: black;
+            z-index: 100;
+        }
+        .sub{
+            text-decoration: underline;
+            text-decoration-thickness: 1.1vh;
+            direction: none;
+        }
+        .azul{
+            text-decoration-color: #41d1eb;
+        }
+        .rosa{
+            text-decoration-color: #ff49db;
+        }
+        .verde{
+            text-decoration-color: #42f58c;
+        }
+        .blanco{
+            color: white;
+        }
+        .blue{
+            color: #41d1eb;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <span>frozen solid designs.</span>
+            <span><a href="https://www.youtube.com/@frozensoliddesigns" title="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a></span>
+            <span><a href="mailto:jason@frozensoliddesigns.com" title="Contact"><i class="fas fa-envelope" aria-hidden="true"></i>jason@frozensoliddesigns.com</a></span>
+        </nav>
+        <button type="button" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+            <i class="fas fa-arrow-circle-up" aria-hidden="true"></i>
+        </button>
+    </header>    
+    <main>
+        <div class="tarjeta uno">
+            <h2><i class="fas fa-feather fa-flip-horizontal blue" aria-hidden="true"></i>Affordable</h2>
+            <h3>We provide solutions for <span class="sub rosa">every budget</span>.</h3>
+            <h4>From <span class="sub azul">simple</span> static sites to <span class="sub verde">complex</span> custom web software - we will work with you to build what you're looking for.</h4>
+        </div>
+        <div class="tarjeta dos">
+           <h2><i class="fas fa-wifi heading spin blanco" aria-hidden="true"></i>Websites</h2>
+           <h3>Get up and running quickly without <span class="sub rosa">breaking the bank</span></h3>
+           <p>Pick from your choice of layouts and features to launch your site in no time!</p>
+        </div>
+        <div class="tarjeta tres">
+            <h2><i class="fas fa-laptop-code heading spin" aria-hidden="true"></i>Custom Software</h2>
+            <h3>Have a project that's a bit more <span class="sub verde">complex</span>? We do that too</h3>
+            <p>We will work with you to build your project from the ground up, <span class="sub rosa">tailored specifically</span> to your needs.</p>
+        </div>
+        <div class="tarjeta cuatro blanco">
+            <h2><i class="fas fa-mobile-alt heading spin" aria-hidden="true"></i>App Development</h2>
+            <h3>Do you have the <span class="sub rosa">perfect idea</span> for an app, but don't know where to start? Let us help</h3>
+            <p>We use the <span class="sub azul">Dart</span> language and <span class="sub azul">Flutter</span> development kit - both developed and maintained by Google - to build state of the art applications that run on both Android and iOS without the need for creating two code bases.</p>
+            <p>Less development time, still compiles and performs as native code.</p>
+        </div>
+        <div class="tarjeta cinco blanco">
+            <h2><i class="fa-brands fa-youtube heading " aria-hidden="true"></i>YouTube</h2>
+            <iframe width="614" height="346" src="https://www.youtube.com/embed/dSs9Km_wIyA?list=PLpU5fESXQXmpsE-7IDWUPdEc-E2vNzs6n" title="Home Screen Timelapse - Design to Flutter App: Vet Clinic Mobile App Design (1/3) by Elena Iurkova" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>   
+            <iframe width="614" height="346" src="https://www.youtube.com/embed/JXO5jIVJ4hE?list=PLpU5fESXQXmrQITuIGBsA--X7ZxfRuW05" title="Detail Screen Timelapse - Design to Flutter App: Stopwatch Design (1/2) by Matt Wojtas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </main>
+    <footer>
+        <span class="cierre">
+            <a href="https://www.youtube.com/@frozensoliddesigns" title="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+            <a href="mailto:jason@frozensoliddesigns.com" title="Contact"><i class="fas fa-envelope" aria-hidden="true"></i>      jason@frozensoliddesigns.com</a>
+        </span>
+        <span class="Policy">
+            <a href="https://www.frozensoliddesigns.com/privacy-policy">Privacy Policy</a>
+        </span>
+    </footer>
+</body>
+</html>
