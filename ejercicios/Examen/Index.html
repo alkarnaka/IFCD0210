@@ -4,28 +4,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/ejercicios/Examen/CSS/estilos.css">
     <style>
         *{
             margin: 0;
             padding: 0;
         }
+        body{
+            font-family: Raleway, sans-serif;
+            font-size: 16px;
+            background-color: #c2daeb;
+        }
+        .contenidoindex{
+            text-align: center;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+        }
+
+        .titulo {
+            
+            grid-area: 1 / 1 / 2 / 3; 
         
+        }
+        .tarjeta1 {  
+            
+            grid-area: 2 / 1 / 3 / 2; 
+        
+        }
+        .tarjeta2 {  
+            
+            grid-area: 2 / 2 / 3 / 3; 
+        
+        }
+        .tarjeta3 {  
+            
+            grid-area: 3 / 1 / 4 / 2; 
+        
+        }
+        .tarjeta4 {  
+            
+            grid-area: 3 / 2 / 4 / 3; 
+        
+        }
+
+        a{
+            color: white;
+            text-decoration: none;
+        }        
+        .cabecera{
+            width: 100%;
+            height: 85px;
+            background-color: #a3b8c7;
+            color: rgb(136, 132, 132);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 2rem;
+            gap: 45%;
+        }
+        .enlacestop{
+            display: flex;
+            gap: 1rem;
+        }
+        .nombre a{
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .foto{
+            background-image: url('https://neon-eclair-e1b074.netlify.app/images/showcase.jpg');
+            height: 600px;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            overflow: visible;
+        }
+    
     </style>
 </head>
 <body>
     <header>
-        <span>
-            
-        </span>
-        <nav>
-            <ul>
-                <li><a href="Examen1.html">Examen 1</a></li>
-                <li><a href="Examen2.html">Examen 2</a></li>
-                <li><a href="Examen2.html">Examen 2</a></li>
-            </ul>
-    </header>
-    <main>
-        <h1></h1>
+        <nav class="cabecera">
+            <div class="nombre">
+                <a href="Index.html">Kevin Brown</a>
+            </div>
+            <div class="enlacestop">
+                <a href="Index.html">Work</a>
+                <a href="About.html">About</a>
+                <a href="Contact.html">Contact</a>
+            </div>
+            </nav>
+            <div class="foto"></div>
+        </header>   
+    <main class="contenidoindex">
+        <div class="titulo">
+            <h1>Hello, I am Kevin Brown. <br>
+                Web Designer and Creative
+            </h1>
+            <p>
+                My work are just a scroll away
+            </p>
+        </div>
+        <div class="tarjeta1">
+            <img src="https://neon-eclair-e1b074.netlify.app/images/project-1.png" alt="Ford">
+            <h3>
+                Ford
+            </h3>
+            <p>
+                A creative and build project
+            </p>
+        </div>
+        <div class="tarjeta2">
+            <img src="/CSS/tarjeta2.png" alt="Pick">
+            <h3>
+                Pick
+            </h3>
+            <p>
+                A creative and build project
+            </p>
+        </div>
+        <div class="tarjeta3">
+            <img src="../tarjeta3.png" alt="Bank">
+            <h3>
+                Bank
+            </h3>
+            <p>
+                A creative and build project
+            </p>
+        </div>
+        <div class="tarjeta4">
+            <img src="../tarjeta4.png" alt="OPT">
+            <h3>
+                OPT
+            </h3>
+            <p>
+                A creative and build project
+            </p>
+        </div>
     </main>
+    <footer>
+        <div>
+            <a href="https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fneon-eclair-e1b074.netlify.app%2F&ref_src=twsrc%5Etfw%7Ctwcamp%5Ebuttonembed%7Ctwterm%5Efollow%7Ctwgr%5Eirimaya&region=follow_link&screen_name=irimaya"><i class="fa-brands fa-x-twitter">follow @irimaya</i></a>
+        </div>
+    </footer>
 </body>
 </html>
