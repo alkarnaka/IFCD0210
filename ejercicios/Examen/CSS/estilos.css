@@ -1,6 +1,103 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Raleway, sans-serif;
+            font-size: 16px;
+            background-color: #F3F4F6;
+        }
+        header{
+            background-image: url('https://neon-eclair-e1b074.netlify.app/images/showcase.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        h1{
+            font-size: 3rem;
+            font-weight: 800;
+            padding: 15px;
+        }
+        a{
+            color: #7a797d;
+            text-decoration: none;
+        }        
+        footer{
+            background-color: #CCCAD1;
+            
+            padding: 60px;
+            text-align: center;
+        }
+        footer div{
+            background-color: black;
+            color: white;
+            border-radius: 16px;
+            width: 150px;
+            margin: 0 auto;
+            font-size: 0.8rem;
+            font-weight: 500;
+            padding: 0.3rem;
+        }
+        footer div a{
+            color: white;
+        }
+        .cabecera{
+            width: 100%;
+            height: 85px;
+            background-color: #F3F4F6;
+            color: #7a797d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50%;
+            margin-bottom: 600px;
+        }
+        .enlacestop{
+            display: flex;
+            gap: 1rem;
+            font-weight: 500;
+        }
+        .nombre a{
+            font-size: 2rem;
+            font-weight:800;
+        }
 
+        .titulo{
+            padding: 100px;
+            margin: 0 auto;
+            background-color: #F3F4F6;
+            text-align: center;
+            width: 80vw;
+        }
+        .titulo p{
+            font-size: 20px;
+            padding-bottom: 15px;
+            font-weight: 200;
+        }
+        .contenidoindex{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+            padding: 50px;
+            flex-wrap: wrap;
+        }
+        .tarjeta{
+            background-color: #F3F4F6;
+            width: 450px;
+            padding: 20px;
+        }
+        .tarjeta img{
+            width: 100%;
+        }
+        .tarjeta h3{
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+        .tarjeta p{
+            font-size: 1rem;
+            font-weight: 200;
+            padding-top: 10px;
+        }
