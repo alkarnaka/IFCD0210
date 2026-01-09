@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+</head>
+<body>
+    <script>
+        function suma(a,b){
+            let total = a + b;
+            return total;
+        }
+
+        let resultado = suma(5,3);
+        console.log("El resultado de la suma es: " + resultado);
+
+    </script>
+    <script>
+        function mayor(primero, segundo){
+            if(primero > segundo){
+                return "el primero";
+            } 
+            if(segundo > primero){
+                return "el segundo";
+            }
+            return "ninguno, son iguales";
+        }    
+        let elmayor = mayor(42, 5);
+        console.log("El mayor es " + elmayor);
+    </script>
+    <script>
+        //una funcion que reciba una frase y devuelva el número de caracteres que tiene
+
+        function largo(cadena){
+            let indice = 0;
+            let letra = '';
+            while (letra != "$"){
+                letra = cadena[indice];
+                console.log(letra);
+                indice++;
+            }
+            return (indice - 1);
+        }
+        
+        let longitud = largo("ola qe ase, te duxa o k ase?$");
+        console.log("La longitud de la cadena es: " + longitud);
+    </script>
+</body>
+</html>

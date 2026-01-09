@@ -1,7 +1,7 @@
         *{
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+
         }
         body{
             font-family: Raleway, sans-serif;
@@ -77,12 +77,17 @@
         }
         .contenidoindex{
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
             align-items: center;
             text-align: center;
             gap: 20px;
-            padding: 50px;
+            padding: 0 15vw;
             flex-wrap: wrap;
+        }
+        .contenidocontact div{
+            margin: 20px;
+            text-align: left;
+            align-items: center;
         }
         .tarjeta{
             background-color: #F3F4F6;

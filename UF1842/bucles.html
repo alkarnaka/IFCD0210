@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while</title>
+</head>
+<body>
+    <script>
+        let vueltas = 0;
+        while(vueltas < 20){
+            console.log("Vueltas: " + vueltas);
+            vueltas++;
+        }
+    </script>
+    <script>
+        //bucle infinito
+        let contador = 0;
+        console.log("preBucle");
+        while(true){
+            console.log("contador: " + contador);
+            if(contador == 10){
+                break;
+            }
+            contador++;
+        }
+        console.log("postBucle");
+    </script>
+    <script>
+        let contar = 10;
+        while(contar >= 0){
+            console.log(contar);
+            contar--;
+        }
+        console.log("¡Boooooom!")
+    </script>
+
+    <script>
+        let pares = 0;
+        while(pares <= 20){
+            pares++;
+            if (pares%2 == 1){
+                continue
+            }
+            console.log("Número par: " + pares);   
+        }
+    </script>
+</body>
+</html>
