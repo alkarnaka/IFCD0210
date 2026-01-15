@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin : 0;
+            padding: 0;
+        }
+        html {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+        .lista-de-tareas {
+            max-width: 600px;
+            margin: 1rem auto;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        #padre {
+            list-style-type: none;
+            margin-top: 1,5rem;
+        }
+        li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 1px solid #eee;
+        }
+        span {
+            flex-grow: 1;
+        }
+        h1 {
+            text-align: center;
+        }
+        input[type="text"] {
+            width: 95%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            margin: 10px 10px;
+            padding: 5px;
+        } 
+        .completado span {
+            text-decoration: line-through;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="lista-de-tareas">
+        <h1>Lista de tareas</h1>
+        <input type="text" name="Tarea" id="nuevaTarea" placeholder="Nueva tarea">
+        <button onclick="agregarTarea()">Agregar tarea</button>
+        <button onclick="limpiarLista()">Limpiar lista</button>
+        
+        <ul id="padre"></ul>
+    </div>
+
+    <script>
+        function agregarTarea() {
+            let cajaTexto = document.getElementById("nuevaTarea")
+            let texto = cajaTexto.value;
+            if (texto == "") {
+                return;
+            }
+            let li =document.createElement("li");
+
+            let checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            checkbox.onclick = function() {
+                tacharTarea(this);
+            };
+            
+            let span = document.createElement("span");
+            span.innerHTML = texto;
+
+            let botonEliminar = document.createElement("button");
+            botonEliminar.innerHTML = "completado";
+            botonEliminar.onclick = function() {
+                eliminarTarea(this);
+            };
+
+            li.appendChild(checkbox);
+            li.appendChild(span);
+            li.appendChild(botonEliminar);
+
+            let lista = document.getElementById("padre");
+            lista.appendChild(li);
+            cajaTexto.value = "";
+            cajaTexto.focus();
+
+        }
+        function eliminarTarea(botonEliminar){
+        let li = botonEliminar.parentNode;
+            li.parentNode.removeChild(li);
+        }
+        function tacharTarea(checkbox) {
+            let li = checkbox.parentNode;
+            if (checkbox.checked) {
+                li.className = "completado";
+            } else {
+                li.className = "";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -4,13 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        function agregar () {
+            // let padre = document.getElementById("lista");
+            let padre = document.querySelector("#lista");
+            let li = document.createElement("li");
+            li.textContent = "Elemento " + (padre.children.length + 1);
+            padre.appendChild(li);
+    
+        }
+        function desagregar () {
+            let padre = document.getElementById("lista");
+            let li = padre.lastChild;
+            if (li) padre.removeChild(li);
+        }
+    </script>
 </head>
 <body>
-    <div class="uno">primer div</div>
-    <ul>
+    <h1>createElement y appendChild</h1>
+    <button onclick="agregar()">Agregar</button>
+    <button onclick="desagregar()">Desagregar</button>
 
+    <ul id="lista">
+        <li><input type="checkbox"> tarea <button>eliminar</button></li>
     </ul>
-    <div>segundo div</div>
-    </script>
-</body>
 </html>
