@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <input type="text" id="texto" placeholder="Escribe algo">
+    <script>
+        let txt = document.getElementById("texto");
+        txt.addEventListener("keydown", function(e){
+            console.log("tipo " + e.type);
+            console.log("target " + e.target);
+            console.log("current " + e.currentTarget);
+            console.log("tecla " + e.key);
+            console.log("caracter " + e.code);
+            // console.log("raton X " + e.clientX);
+            // console.log("raton Y " + e.clientY);
+        });
+    </script>
+
+    <button id="tempo"> temporizador</button>
+
+    <script>
+        let bnt = document.getElementById("tempo");
+
+        bnt.addEventListener("click", iniciarTemporizador);
+        
+        let contador = 10;
+        let T = setInterval(incrementa, 1000);
+        function incrementa() {
+            if (contador == 0) {
+                clearInterval(T);
+                console.log("Temporizador detenido");
+            }
+            else {
+                contador--;
+                bnt.textContent = "Espera " + contador + " segundos";
+            }
+        }
+      
+    </script>
+</body>
+</html>
