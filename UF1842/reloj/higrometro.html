@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div class="parent">
+    <div class ="div1">
+        <span id="hora"></span>:<span id="minutos"></span>:<span id="segundos"></span>
+    </div>
+
+
+    <div class ="div2">
+        
+        <span id="dia"></span> /
+        <span id="mes"></span>
+    </div>
+    <div class ="div3">
+        <span id="diaSemana"></span>
+    </div>
+
+    <div class ="div4">
+        H:<span id="humedad"></span> %
+        <br>
+        T:<span id="temperatura"></span> ºC
+    </div>   
+</div>
+    
+
+    <button onclick="iniciarReloj()">Iniciar</button>
+    <button onclick="pararReloj()">Parar</button>
+    <script src="js/reloj.js"></script>
+</body>
+</html>
