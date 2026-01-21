@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #scrollBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 10px;
+            width: 0;
+            background-color: red;
+            z-index: 1001;
+        }
+        #griss {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 10px;   
+            width:  100%; ;
+            background-color: rgb(88, 87, 87);
+            z-index: 1000;
+        }
+        h2 {
+            margin-top: 10px;
+        }
+        .oscuro {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        
+        #flecha{
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            bottom: 20px;
+            right: 0px;
+            font-size: 30px;
+            cursor: pointer;
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            align-items: start;
+            justify-content: center;
+            border-top-left-radius: 25px;
+            border-bottom-left-radius: 25px;
+        }
+        #cuadro{
+            margin-left: 30px;
+            height: 500px;
+            width: 800px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="scrollBar"></div>
+    <div id="griss"></div>
+
+
+    <h2>Barra de progreso con scroll.</h2>
+
+    <button id="btn">⏾ Tema oscuro</button>
+
+    <div style="height: 1600px;">
+
+        <textarea name="" id="cuadro" maxlength="100"></textarea>
+        <p>Utilizados <span id="cuenta">0</span> de 100 caracteres</p>
+        <button id="btn_deshacer">deshacer</button>
+
+    </div>
+
+    <div id="flecha" onclick="window.scrollTo(0,0)">🢁</div>
+   
+    <script>
+        window.addEventListener("scroll", function() {
+            let scrolled = window.scrollY;
+            let altura = document.body.scrollHeight - window.innerHeight;
+            document.getElementById("scrollBar").style.width = ((scrolled / altura) * 100) + "%";
+            document.getElementById("griss").style.width = scrolled ? "100%":"0";
+        });
+    </script>
+   
+    <script>
+        const boton = document.getElementById("btn");
+        boton.addEventListener("click", function() {
+            document.body.classList.toggle("oscuro");
+            boton.textContent = document.body.classList.contains("oscuro") ? "☀︎ Tema claro" : "⏾ Tema oscuro";
+        });
+    </script>
+    
+    <script>
+
+        let cuadroTexto = document.getElementById("cuadro");
+        let cuentaTexto = document.getElementById("cuenta");
+        let historial = [];
+
+        cuadroTexto.addEventListener('input',function(){
+            cuentaTexto.innerHTML = cuadroTexto.value.length;
+
+
+            historial.push(cuadroTexto.value);
+        });
+        let btn_desh = document.getElementById('btn_deshacer');
+
+        btn_desh.addEventListener('click',function(){
+            historial.pop();
+            cuadroTexto.value = historial.slice(-1) || '';
+            cuentaTexto.innerHTML = cuadroTexto.value.length;
+        });
+    </script>
+
+    <div class="contenedor">
+        <div class="tabs">
+            <div class="tab active" data-target="tab1">Pestaña 1</div>
+            <div class="tab" data-target="tab2">Pestaña 2</div>
+            <div class="tab" data-target="tab3">Pestaña 3</div>
+        </div>
+        <div class="tab-content active" id="tab1">Contenido de la pestaña 1</div>
+        <div class="tab-content" id="tab2">Contenido de la pestaña 2</div>
+        <div class="tab-content" id="tab3">Contenido de la pestaña 3</div>
+    </div>
+    <script>
+        let tabs = document.querySelectorAll('.tab')
+        let contenidos = document.querySelectorAll('.tab-content')
+
+    </script>
+
+</body>
+</html>
