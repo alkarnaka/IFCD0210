@@ -53,11 +53,50 @@
             border-bottom-left-radius: 25px;
         }
         #cuadro{
-            margin-left: 30px;
-            height: 500px;
-            width: 800px;
+            margin: 0 auto;
+            height: 200px;
+            width: 600px;
         }
 
+        .contenedor{
+            margin: 0 auto;
+            width: 80%;
+            max-width: 600px;
+            background-color: aquamarine;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.181);
+        }
+        .tabs{
+            display: flex;
+            background-color: rgb(163, 239, 239);
+            border-radius: 8px 8px 2px 2px ;
+            overflow: hidden;
+        }
+        .tab{
+            padding: 15px;
+            flex: 1;
+            text-align: center;
+            background-color: cadetblue;
+            cursor: pointer;
+            transition: background-color 0,3s;
+       
+        }
+        .tab:hover{
+            background-color: darkcyan;
+        }
+        .tab.active{
+            background-color: rgb(0, 114, 114);
+        }
+
+            /* estilos del contenido */
+        .tab-content{
+            padding: 20px;
+            display: none;  
+            background-color: rgb(163, 239, 239);
+        }
+        .tab-content.active{
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -69,6 +108,33 @@
     <h2>Barra de progreso con scroll.</h2>
 
     <button id="btn">⏾ Tema oscuro</button>
+
+    <div class="contenedor">
+        <div class="tabs">
+            <div class="tab active" data-target="tab1">Pestaña 1</div>
+            <div class="tab" data-target="tab2">Pestaña 2</div>
+            <div class="tab" data-target="tab3">Pestaña 3</div>
+        </div>
+        <div class="tab-content active" id="tab1">Contenido de la pestaña 1</div>
+        <div class="tab-content" id="tab2">Contenido de la pestaña 2</div>
+        <div class="tab-content" id="tab3">Contenido de la pestaña 3</div>
+    </div>
+    <script>
+        let tabs = document.querySelectorAll('.tab');
+        let contenidos = document.querySelectorAll('.tab-content');
+        for(let i = 0; i< tabs.length; i++){
+            tabs[i].addEventListener('click', function(){
+                for(let j = 0; j < tabs.length; j++ ) {
+                    tabs[j].classList.remove('active');
+                    contenidos[j].classList.remove('active')
+                }
+                this.classList.add('active');
+                let targetId = this.getAttribute('data-target');
+                let targetContent = document.getElementById(targetId)
+                targetContent.classList.add('active')
+            });
+        }
+    </script>
 
     <div style="height: 1600px;">
 
@@ -116,22 +182,6 @@
             cuadroTexto.value = historial.slice(-1) || '';
             cuentaTexto.innerHTML = cuadroTexto.value.length;
         });
-    </script>
-
-    <div class="contenedor">
-        <div class="tabs">
-            <div class="tab active" data-target="tab1">Pestaña 1</div>
-            <div class="tab" data-target="tab2">Pestaña 2</div>
-            <div class="tab" data-target="tab3">Pestaña 3</div>
-        </div>
-        <div class="tab-content active" id="tab1">Contenido de la pestaña 1</div>
-        <div class="tab-content" id="tab2">Contenido de la pestaña 2</div>
-        <div class="tab-content" id="tab3">Contenido de la pestaña 3</div>
-    </div>
-    <script>
-        let tabs = document.querySelectorAll('.tab')
-        let contenidos = document.querySelectorAll('.tab-content')
-
     </script>
 
 </body>

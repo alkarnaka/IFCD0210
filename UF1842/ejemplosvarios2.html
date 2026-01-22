@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: rgb(64, 64, 62);   
+        }
+        .acordeon{
+            max-width: 100%;
+            margin: 20px;
+        }
+        .acordeon-item{
+            margin-bottom: 5px;
+
+        }
+
+        .acordeon-header{  
+            background-color: rgb(178, 44, 44);
+            padding: 12px;
+            cursor: pointer;
+            font-weight: bold;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        .acordeon-content{
+            display: none;
+            background-color: rgb(241, 241, 77);
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+        .acordeon-content.active{
+            display: block;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+        .zoroh{
+            background-color: green;;
+        }
+        .zoroc{
+            background-color: rgb(138, 102, 85);
+        }
+        .sanjih{
+            background-color: blue;
+        }
+        .sanjic{
+            background-color: yellow;
+        }
+        .namih{
+            background-color: orange;
+        }
+        .namic{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplo de acordeón</h1>
+    <div class="acordeon">
+        <div class="acordeon-item">
+            <div class="acordeon-header luffyh" data-target="sec1">🏴‍☠️ Monkey D. Luffy</div>
+            <div class="acordeon-content luffyc" id="sec1"> Es el capitán de los Piratas del Sombrero de Paja y su sueño es convertirse en el Rey de los Piratas. Tras comer la Fruta del Diablo Gomu Gomu no Mi, su cuerpo adquirió propiedades de goma, lo que le permite estirarse y realizar ataques muy poderosos. Luffy es conocido por su personalidad alegre, su gran determinación y su fuerte sentido de la justicia, siempre dispuesto a proteger a sus amigos cueste lo que cueste.</div>
+        </div>      
+
+        <div class="acordeon-item">
+            <div class="acordeon-header zoroh" data-target="sec2">⚔️ Roronoa Zoro</div>
+            <div class="acordeon-content zoroc" id="sec2">El combatiente principal de la tripulación y uno de los miembros más fuertes. Su objetivo es convertirse en el mejor espadachín del mundo, y para ello entrena constantemente. Zoro utiliza un estilo de combate único llamado Santoryu, que consiste en usar tres espadas al mismo tiempo. Es serio, leal y tiene un fuerte código de honor, siendo una de las manos derechas más confiables de Luffy.</div>
+        </div>      
+   
+        <div class="acordeon-item">
+            <div class="acordeon-header sanjih" data-target="sec3">🍳 Sanji</div>
+            <div class="acordeon-content sanjic" id="sec3">El cocinero de los Piratas del Sombrero de Paja y se encarga de alimentar a toda la tripulación. Su sueño es encontrar el legendario mar llamado All Blue, donde se reúnen todos los mares del mundo. Sanji lucha usando principalmente sus piernas, ya que considera sus manos sagradas para cocinar. Es elegante, inteligente y tiene un gran respeto por las mujeres, además de un fuerte compromiso con sus compañeros.</div>
+        </div>      
+    
+        <div class="acordeon-item">
+            <div class="acordeon-header namih" data-target="sec4">🧭 Nami</div>
+            <div class="acordeon-content namic" id="sec4">La navegante de los Piratas del Sombrero de Paja y una experta en cartografía y navegación. Su sueño es crear un mapa completo del mundo. Gracias a su gran inteligencia y conocimiento del clima, es capaz de guiar a la tripulación incluso en las condiciones más peligrosas del mar. Aunque le encanta el dinero y puede parecer interesada, Nami es muy leal a sus amigos y siempre hace lo posible por protegerlos.</div>
+        </div>   
+    </div>    
+        <script>
+            let headers = document.querySelectorAll(".acordeon-header");
+            let contenidos = document.querySelectorAll('.acordeon-content');
+
+            for (let i = 0 ; i < headers.length; i++){
+                headers[i].addEventListener('click', function(){
+                    let targetId = this.getAttribute('data-target');
+                    let targetContent = document.getElementById(targetId);
+                    
+                    for (let j=0; j< contenidos.length; j++){
+                        contenidos[j].classList.remove('active');
+
+                    }
+                    targetContent.classList.add('active');
+                })
+            }
+        </script>
+</body>
+</html>
