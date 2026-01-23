@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0 auto;
+        }
+        .parent {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 0,25fr repeat(4, 1fr) 0,25fr;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+
+            background-color: bisque;
+        }
+        .cabecera{
+            text-align: center;
+            align-content: center;
+            margin: 0 auto;
+            padding: 0px;
+            height: 100px;
+            width: 100vw;
+            background-color: brown;
+            color: bisque;
+        }
+        .carrito{
+            background-color: rgb(250, 187, 111);
+            width: 100%;
+            text-align: center;
+        }
+        .producto{
+            margin: 10px auto;
+            text-align: center;
+            border: 1px solid salmon;
+            border-radius: 5px;
+            display:flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .nombre{
+            text-align: center;
+        }
+        .descripcion{
+            text-align: center;
+        }
+        .footer{
+            height: 100px;
+            width: 100%;
+            align-content: center;
+            background-color: brown;
+            color: bisque;
+        }
+        .footesq{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            gap: 40%;
+
+
+        }
+            .div1 { grid-area: 1 / 1 / 2 / 5; }
+            .div2 { grid-area: 2 / 4 / 6 / 5; }
+            .div3 { grid-area: 6 / 1 / 7 / 5; }
+            .div4 { grid-area: 2 / 1 / 3 / 2; }
+            .div5 { grid-area: 2 / 2 / 3 / 3; }
+            .div6 { grid-area: 2 / 3 / 3 / 4; }
+            .div7 { grid-area: 3 / 1 / 4 / 2; }
+            .div8 { grid-area: 3 / 2 / 4 / 3; }
+            .div9 { grid-area: 3 / 3 / 4 / 4; }
+            .div10 { grid-area: 4 / 1 / 5 / 2; }
+            .div11 { grid-area: 4 / 2 / 5 / 3; }
+            .div12 { grid-area: 4 / 3 / 5 / 4; }
+            .div13 { grid-area: 5 / 1 / 6 / 2; }
+            .div14 { grid-area: 5 / 2 / 6 / 3; }
+            .div15 { grid-area: 5 / 3 / 6 / 4; }
+        li{
+            list-style: none;
+            text-align: center;
+            align-content: center;
+        }
+        
+    </style>
+</head>
+<body class="parent">
+    <div class="div1 cabecera"><h1>Almacenes Rafita</h1></div>
+    <div class="div2 carrito">
+        <ul id="lista">
+        </ul>
+        <p>Total: <span id="total"></span> €</p>
+        <button id="pagar">
+            pagar
+        </button>
+    </div>
+        <div class="div4 producto" data-precio="34.75" id="prod01">
+            <h3 class="nombre">cosa</h3>
+            <img src="https://placehold.co/200x200" alt="" class="foto">
+            <p class="descripcion">descripcion de la cosa</p>
+            <span class="precion">precio</span>
+            <button class="boton comprar">carrito</button>
+        </div>
+        <div class="div5 producto" data-precio="12.85" id="prod02">
+            <h3 class="nombre">cosa</h3>
+            <img src="https://placehold.co/200x200" alt="" class="foto">
+            <p class="descripcion">descripcion de la cosa</p>
+            <span class="precion">precio</span>
+            <button class="boton comprar">carrito</button>
+        </div>
+        <div class="div6 producto" data-precio="30.60" id="prod03">
+            <h3 class="nombre">cosa</h3>
+            <img src="https://placehold.co/200x200" alt="" class="foto">
+            <p class="descripcion">descripcion de la cosa</p>
+            <span class="precion">precio</span>
+            <button class="boton comprar">carrito</button>
+        </div>
+        <div class="div7 producto" data-precio="96.8" id="prod04">
+            <h3 class="nombre">cosa</h3>
+            <img src="https://placehold.co/200x200" alt="" class="foto">
+            <p class="descripcion">descripcion de la cosa</p>
+            <span class="precion">precio</span>
+            <button class="boton comprar">carrito</button>
+        </div>
+        <div class="div8 producto" data-precio="9.35" id="prod05">
+            <h3 class="nombre">cosa</h3>
+            <img src="https://placehold.co/200x200" alt="" class="foto">
+            <p class="descripcion">descripcion de la cosa</p>
+            <span class="precion">precio</span>
+            <button class="boton comprar">carrito</button>
+        </div>
+        <div class="div9 producto" data-precio="2.85" id="prod06">
+            <h3 class="nombre">cosa</h3>
+            <img src="https://placehold.co/200x200" alt="" class="foto">
+            <p class="descripcion">descripcion de la cosa</p>
+            <span class="precion">precio</span>
+            <button class="boton comprar">carrito</button>
+        </div>
+        <div class="div10 producto" data-precio="80.85" id="prod07">
+            <h3 class="nombre">cosa</h3>
+            <img src="https://placehold.co/200x200" alt="" class="foto">
+            <p class="descripcion">descripcion de la cosa</p>
+            <span class="precion">precio</span>
+            <button class="boton comprar">carrito</button>
+        </div>
+        <div class="div11 producto" data-precio="56.85" id="prod08">
+            <h3 class="nombre">cosa</h3>
+            <img src="https://placehold.co/200x200" alt="" class="foto">
+            <p class="descripcion">descripcion de la cosa</p>
+            <span class="precion">precio</span>
+            <button class="boton comprar">carrito</button>
+        </div>
+        <div class="div12 producto" data-precio="76.70" id="prod09">
+            <h3 class="nombre">cosa</h3>
+            <img src="https://placehold.co/200x200" alt="" class="foto">
+            <p class="descripcion">descripcion de la cosa</p>
+            <span class="precion">precio</span>
+            <button class="boton comprar">carrito</button>
+        </div>
+        <div class="div13 producto" data-precio="13.85" id="prod10" >
+            <h3 class="nombre">cosa</h3>
+            <img src="https://placehold.co/200x200" alt="" class="foto">
+            <p class="descripcion">descripcion de la cosa</p>
+            <span class="precion">precio</span>
+            <button class="boton comprar">carrito</button>
+        </div>
+        <div class="div14 producto" data-precio="18.85" id="prod11">
+            <h3 class="nombre">cosa</h3>
+            <img src="https://placehold.co/200x200" alt="" class="foto">
+            <p class="descripcion">descripcion de la cosa</p>
+            <span class="precion">precio</span>
+            <button class="boton comprar">carrito</button>
+        </div>
+        <div class="div15 producto" data-precio="72.85" id="prod12">
+            <h3 class="nombre">cosa</h3>
+            <img src="https://placehold.co/200x200" alt="" class="foto">
+            <p class="descripcion">descripcion de la cosa</p>
+            <span class="precion">72.85€</span>
+            <button class="boton comprar">carrito</button>
+        </div>
+        <div class="div3 footer"> 
+            <div class="footesq">
+            <span>El Almacen de Rafita © All rights reserved</span>
+            <span>compra-segura</span>
+            </div>
+            <ul class="mapa">
+                <a href="">Inicio</a>|
+                <a href="">Categorias</a>|
+                <a href="">Carrito</a>|
+                <a href="">FaQs</a>|
+                <a href="">Sobre Nosotros</a>|
+                <a href="">Contacto</a>
+            </ul>   
+        </div>
+
+        <script>
+            let productos = document.querySelectorAll('.producto');
+            let total_element = document.getElementById('total');
+            let lista_carrito = document.getElementById('lista')
+            let total_suma = 0;
+
+            for(let i = 0; i<productos.length; i++){
+                let boton = productos[i].querySelector('.comprar');
+                let precio = productos[i].getAttribute('data-precio')
+                let nombre = productos[i].querySelector('.nombre')
+                boton.addEventListener('click', function(){
+                    let li = document.createElement('li')
+                    li.innerHTML = nombre.textContent + " - " + precio + "€";
+                    lista_carrito.appendChild(li);
+                    total_suma += parseFloat(precio);
+                    total_element.textContent = total_suma.toFixed(2);
+                })
+            }
+            let pagado = document.getElementById('pagar')
+            pagado.addEventListener('click', function(){
+                for(let fila of lista_carrito.querySelectorAll('li')){
+                    fila.remove();
+                }
+                total_suma = 0;
+                total_element.textContent = '0.00';
+            })
+        </script>
+
+</body>
+</html>
