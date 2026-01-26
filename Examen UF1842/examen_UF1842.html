@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--
+1. (2,5 puntos ) Crea un programa en JavaScript que:
+a. Declare una variable llamada edad.
+b. Si la edad es mayor o igual a 18, muestre por consola el mensaje: "Eres mayor
+de edad".
+c. Si no, muestre: "Eres menor de edad"-->
+<script>
+function verificarEdad(edad) {
+    if (edad >= 18) {
+        console.log("Eres mayor de edad");
+    } else {
+        console.log("Eres menor de edad");
+    }
+}
+</script>
+<!--
+2. (2,5 puntos) Dado el siguiente array: let numeros = [3, 7, 2, 9, 5, 10];
+a. Recorre el array usando un bucle for.
+b. Calcula la suma total de los números.
+c. Genera dinámicamente una lista HTML (Una ul con un li por cada elemento del
+array).-->
+
+<script>
+let numeros = [3, 7, 2, 9, 5, 5,10];
+let suma = 0;
+for (let i = 0; i < numeros.length; i++) {
+    suma += numeros[i];
+}
+console.log("La suma total es: " + suma);
+document.write("<ul>");
+    for (let i = 0; i < numeros.length; i++) {
+        document.write("<li>" + numeros[i] + "</li>");
+    }
+</script>
+<!--
+3. (5 puntos) Crea un programa en JavaScript que gestione las calificaciones de un
+alumno usando una o más funciones.
+Crea una función llamada calcularResultado.
+La función debe recibir un array de números que representan las notas de un alumno.
+La función debe hacer lo siguiente:
+1. Calcular la media de las notas.
+2. Determinar el estado, es decir, si el alumno está aprobado o suspenso (media ≥ 5).
+3. Determinar la calificación final según la media:
+Media < 5 → "Insuficiente"
+Media ≥ 5 y < 7 → "Suficiente"
+Media ≥ 7 y < 9 → "Notable"
+Media ≥ 9 → "Sobresaliente"
+4. La función debe devolver un array con la siguiente información:
+[media, estado, calificacion]-->
+
+<script>
+function calcularResultado(notas) {
+    let suma = 0;
+    for (let i = 0; i < notas.length; i++) {
+        suma += notas[i];
+    }
+    let media = suma / notas.length;
+
+    let estado = media >= 5 ? "Aprobado" : "Suspenso";
+
+    let calificacion;
+    if (media < 5) {
+        calificacion = "Insuficiente";
+    } else if (media >= 5 && media < 7) {
+        calificacion = "Suficiente";
+    } else if (media >= 7 && media < 9) {
+        calificacion = "Notable";
+    } else {
+        calificacion = "Sobresaliente";
+    }
+
+    return [media, estado, calificacion];
+}
+</script>
+
+<!--
+Llama a la función con un array de prueba y muestra los resultados por consola y en el
+DOM. -->
+
+<script>
+    let notasAlumno = [6, 8, 7, 9, 5];
+    let resultado = calcularResultado(notasAlumno);
+    console.log("Media: " + resultado[0]);
+    console.log("Estado: " + resultado[1]);
+    console.log("Calificación: " + resultado[2]);
+</script>
+
+</body>
+</html>
