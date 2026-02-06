@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/css/estilos.css">
+</head>
+<body>
+
+    <h1>Hola {{ nombre }} {{apellido}}</h1>
+
+    {% if nombre %}
+        <h2>Hay nombre</h2>
+    {% else %}
+        <h2>No hay nombre</h2>
+    {% endif %}
+
+    <h2>Números</h2>
+    <ul>
+        {% for n in numero %}
+            <li>indice: {{n}}</li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>

@@ -33,7 +33,6 @@ def prueba():
 @app.route('/prueba1/')
 @app.route('/prueba1/<string:nombre>')
 @app.route('/prueba1/<string:nombre>/<int:numero>')
-
 def saludos(nombre=None,numero=None):
     salida = ""
     if nombre and numero:
@@ -65,6 +64,13 @@ def sumar():
         </form>
         '''
         return cadena
+
+
+@app.route('/jinja1')
+def jinja1():
+    lista = ['uno','dos','tres','cuatro']
+    # return render_template('jinja1.html',nombre='Eufrasio', apellido='malasio', numero=lista)
+    return render_template('principal.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
