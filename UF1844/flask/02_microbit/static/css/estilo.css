@@ -1,4 +1,4 @@
-        html {
+html {
             font-size: 16px;
         }
 
@@ -34,10 +34,6 @@
         footer{
             color:aliceblue;
             line-height: 2.5rem;
-            position: fixed;
-            left: 0;
-            right: 0;
-            bottom: 0;        
         }
 
 
@@ -46,7 +42,6 @@
             margin: 0 auto;
             /* border:1px solid rgb(228, 239, 26); */
 
-        
         }
 
         .cabecera {
