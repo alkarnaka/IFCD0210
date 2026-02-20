@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Corporate 1</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css" />
+</head>
+
+<body>
+
+    <nav class="barra">
+        <div class="contenedor barra-interior">
+            <div class="menu" id="menu">
+                <a href="#" class="logo">🔥Logo</a>
+                <button class="hamburguesa" id="btnMenu">aqui</button>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                                <a href="#">Products</a>
+                                <!-- Services dropdown -->
+                                <div class="dropdown">
+                                    <a href="#" class="dropdown-toggle" id="servicesToggle" aria-expanded="false" aria-controls="servicesMenu">Services ▾</a>
+                                    <ul class="dropdown-menu" id="servicesMenu" role="menu" aria-labelledby="servicesToggle">
+                                        <li role="none"><a role="menuitem" href="#">Engage</a></li>
+                                        <li role="none"><a role="menuitem" href="#">Pontificate</a></li>
+                                        <li role="none"><a role="menuitem" href="#">Synergize</a></li>
+                                    </ul>
+                                </div>
+            </div>
+            <div>
+            <input class="busqueda" type="text" placeholder="Search" />
+            <button class="buscar">search</button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="contenedor">
+            <h1><img width="50" height="50" src="https://img.icons8.com/ios-filled/50/dcba8d/bar-chart--v1.png" alt="bar-chart--v1"/>Dramatically Engage</h1>
+            <p>Objectively innovate empowered manufactured products whereas parallel platforms.</p>
+            <a class="boton">Engage Now</a>
+        </div>
+    </section>
+
+    <section class="seccion-gris">
+        <div class="contenedor">
+            <h2>Superior Collaboration <small>Visualize Quality</small></h2>
+
+            <p class="descripcion">
+                Proactively envisioned multimedia based expertise and cross-media growth strategies. Seamlessly
+                visualize quality intellectual capital without superior collaboration and idea-sharing. Holistically
+                pontificate installed base portals after maintainable products.
+            </p>
+
+            <div class="rejilla">
+                <div>
+                    <div class="imagen-falsa">700×300</div>
+                    <h4>Efficiently Unleash</h4>
+                    <p class="parrafo">Collaboratively administrate empowered markets via plug-and-play networks.
+                        Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize
+                        customer directed convergence without revolutionary ROI.</p>
+                </div>
+
+                <div>
+                    <div class="imagen-falsa">700×300</div>
+                    <h4>Completely Synergize</h4>
+                    <p class="parrafo">Dramatically maintain clicks-and-mortar solutions without functional solutions.
+                        Efficiently unleash cross-media information without cross-media value. Quickly maximize timely
+                        deliverables for real-time schemas.</p>
+                </div>
+
+                <div>
+                    <div class="imagen-falsa">700×300</div>
+                    <h4>Dynamically Procrastinate</h4>
+                    <p class="parrafo">Professionally cultivate one-to-one customer service with robust ideas.
+                        Completely synergize resource taxing relationships via premier niche markets. Dynamically
+                        innovate resource-leveling customer service for state of the art customer service.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion-naranja">
+        <div class="contenedor">
+            <div class="rejilla">
+                <div>
+                    <h3>🔥 Dynamically Procrastinate</h3>
+                    <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically
+                        procrastinate B2C users after installed base benefits. Dramatically visualize customer directed
+                        convergence without revolutionary ROI.</p>
+                    <a class="boton">Procrastinate</a>
+                </div>
+
+                <div>
+                    <h3>⚡ Efficiently Unleash</h3>
+                    <p>Dramatically maintain clicks-and-mortar solutions without functional solutions. Efficiently
+                        unleash cross-media information without cross-media value. Quickly maximize timely deliverables
+                        for real-time schemas.</p>
+                    <a class="boton">Unleash</a>
+                </div>
+
+                <div>
+                    <h3>🍃 Completely Synergize</h3>
+                    <p>Professionally cultivate one-to-one customer service with robust ideas. Completely synergize
+                        resource taxing relationships via premier niche markets. Dynamically innovate resource-leveling
+                        customer service for state of the art customer service.</p>
+                    <a class="boton">Synergize</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <p>
+                <a href="#">Terms &amp; Conditions</a> |
+                <a href="#">Privacy Policy</a> |
+                <a href="#">Contact</a>
+            </p>
+            <p>Copyright © Example.com 2015</p>
+        </div>
+    </footer>
+
+    <script>
+        // Dropdown toggle for Services
+        (function(){
+            const toggle = document.getElementById('servicesToggle');
+            const menu = document.getElementById('servicesMenu');
+            const dropdown = toggle ? toggle.closest('.dropdown') : null;
+
+            function closeDropdown(){
+                if(dropdown) dropdown.classList.remove('open');
+                if(toggle) toggle.setAttribute('aria-expanded','false');
+            }
+
+            document.addEventListener('click', function(e){
+                if(!toggle) return;
+                const target = e.target;
+                // click on toggle
+                if(toggle.contains(target)){
+                    e.preventDefault();
+                    const isOpen = dropdown.classList.contains('open');
+                    if(isOpen){ closeDropdown(); }
+                    else { dropdown.classList.add('open'); toggle.setAttribute('aria-expanded','true'); }
+                    return;
+                }
+                // click outside -> close
+                if(dropdown && !dropdown.contains(target)){
+                    closeDropdown();
+                }
+            });
+
+            // close on Escape
+            document.addEventListener('keydown', function(e){
+                if(e.key === 'Escape') closeDropdown();
+            });
+        })();
+
+    </script>
+
+</body>
+
+</html>
