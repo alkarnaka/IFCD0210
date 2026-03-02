@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    color: #555;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.barra {
+    background: #111;
+}
+
+.barra-interior {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+    position: relative;
+}
+
+.logo {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo svg { display: inline-block; vertical-align: middle; }
+.logo-text { color: #fff; font-weight: 700; font-size: 16px; }
+
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Dropdown styles for Services */
+.menu { position: relative; }
+.dropdown { position: relative; }
+.dropdown-toggle { color: #ccc; text-decoration: none; cursor: pointer; display: inline-block; }
+.dropdown-toggle::after { content: ''; display: inline-block; margin-left: 6px; }
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background: #fff;
+    color: #333;
+    min-width: 160px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    border-radius: 4px;
+    list-style: none;
+    padding: 6px 0;
+    z-index: 300;
+}
+.dropdown-menu li a {
+    display: block;
+    padding: 8px 14px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+.dropdown-menu li a:hover { background: #f5f5f5; }
+.dropdown.open .dropdown-menu { display: block; }
+
+/* Mobile: ensure dropdown menu is relative to container */
+@media (max-width: 900px) {
+  .menu { display: none; }
+  .hamburguesa { display: inline-block; }
+  .dropdown-menu { position: static; box-shadow: none; background: transparent; padding: 0; }
+  .dropdown-menu li a { padding: 8px 0; color: #fff; }
+}
+
+.menu a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.busqueda {
+    padding: 6px 10px;
+}
+
+.hamburguesa {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 22px;
+}
+
+.hero {
+    background: #8cc63f;
+    color: #eaffc7;
+    text-align: center;
+    padding: 50px 0 50px;
+    text-align: start;
+}
+
+.hero h1 {
+    font-size: 56px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.boton {
+    display: inline-block;
+    padding: 5px 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.seccion-gris {
+    background: #f5f5f5;
+    padding: 70px 0 80px;
+    text-align: start;
+}
+
+.descripcion {
+    margin: 15px auto 45px;
+    color: #777;
+    font-size: 15px;
+
+}
+
+.seccion-gris h4{
+    font-size: 24px;
+    color: #337ab7;
+}
+.parrafo{
+    font-size: 14px;
+}
+.rejilla {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.imagen-falsa {
+    width: 100%;
+    height: 200px;
+    background: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9e9e9e;
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+.seccion-naranja {
+    background: #d79c1a;
+    padding: 60px 0;
+    text-align: start;
+    color: #000;
+}
+
+footer {
+    margin: 0 auto;
+    background: #eee;
+    text-align: start;
+    padding: 28px 0 35px;
+    font-size: 13px;
+    color: #777;
+}
+footer div{
+    margin: 0 auto;
+    width: 70%;
+}
+footer a {
+    color: #337ab7;
+    margin: 0 4px;
+    text-decoration: none;
+}
+.buscar{
+    padding: 6px 10px;
+    background-color: white;
+    border-radius: 5px;
+    
+}
