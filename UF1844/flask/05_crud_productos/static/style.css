@@ -1,0 +1,204 @@
+/* Post-Punk Style */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    color: #e0e0e0;
+    font-family: 'Courier New', monospace;
+    line-height: 1.6;
+    border-left: 5px solid #d32f2f;
+    min-height: 100vh;
+}
+
+/* Contenedor principal */
+body > * {
+    padding: 20px 30px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+    color: #ff6b6b;
+    text-shadow: 2px 2px 0px #d32f2f, 4px 4px 8px rgba(0,0,0,0.7);
+    border-bottom: 3px dashed #d32f2f;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+h1::before {
+    content: "▮▮";
+    margin-right: 10px;
+    color: #d32f2f;
+}
+
+/* Formularios */
+form {
+    margin-bottom: 25px;
+    background: rgba(20, 20, 20, 0.8);
+    padding: 20px;
+    border: 2px solid #333;
+    border-left: 5px solid #ff6b6b;
+    position: relative;
+}
+
+form::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -5px;
+    right: 0;
+    height: 2px;
+    background: repeating-linear-gradient(90deg, #d32f2f 0px, #d32f2f 5px, transparent 5px, transparent 10px);
+    opacity: 0.5;
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px 0;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ff9800;
+    font-weight: bold;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    background: #111;
+    border: 2px solid #444;
+    color: #e0e0e0;
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+select:focus {
+    outline: none;
+    border-color: #ff6b6b;
+    box-shadow: 0 0 10px rgba(255, 107, 107, 0.3);
+    background: #1a1a1a;
+}
+
+select {
+    cursor: pointer;
+}
+
+option {
+    background: #1a1a1a;
+    color: #e0e0e0;
+}
+
+/* Botones */
+button {
+    background: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%);
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #ff6b6b;
+    transition: left 0.3s ease;
+    z-index: -1;
+}
+
+button:hover {
+    box-shadow: 0 0 15px rgba(255, 107, 107, 0.5), inset 0 0 10px rgba(0,0,0,0.3);
+    transform: translateY(-2px);
+}
+
+button:hover::before {
+    left: 0;
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Para el botón borrar */
+form:last-of-type button {
+    background: linear-gradient(135deg, #7b1fa2 0%, #4a148c 100%);
+}
+
+form:last-of-type button:hover {
+    box-shadow: 0 0 15px rgba(123, 31, 162, 0.5);
+}
+
+/* Select dropdown con foco */
+select:focus {
+    color: #ff6b6b;
+}
+
+/* Líneas decorativas */
+hr {
+    border: none;
+    height: 2px;
+    background: repeating-linear-gradient(90deg, #d32f2f 0px, #d32f2f 10px, transparent 10px, transparent 20px);
+    margin: 30px 0;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+    }
+    
+    form {
+        padding: 15px;
+    }
+    
+    input[type="text"],
+    select {
+        font-size: 16px; /* Prevenir zoom en mobile */
+    }
+}
+
+/* Animación de carga */
+@keyframes glitch {
+    0% {
+        text-shadow: 2px 2px 0px #d32f2f, 4px 4px 8px rgba(0,0,0,0.7);
+    }
+    50% {
+        text-shadow: -2px -2px 0px #ff6b6b, -4px -4px 8px rgba(0,0,0,0.7);
+    }
+    100% {
+        text-shadow: 2px 2px 0px #d32f2f, 4px 4px 8px rgba(0,0,0,0.7);
+    }
+}
+
+h1:hover {
+    animation: glitch 0.3s ease;
+}

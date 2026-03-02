@@ -9,10 +9,11 @@ def guardar_datos(archivo, datos):
         json.dump(datos, f, indent= 4, ensure_ascii=False)
 
 def nuevo_id(archivo_prod):
-    lista_ids = []
     datos = cargar_productos(archivo_prod)
     prods = datos['productos']
-    for p in prods:
-        lista_ids.append(p['id'])
     
-    return max (lista_ids) + 1
+    if not prods:
+        return 1
+    
+    lista_ids = [p['id'] for p in prods]
+    return max(lista_ids) + 1

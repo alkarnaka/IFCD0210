@@ -1,37 +1,36 @@
 {
-    "categoria":[
+    "categoria": [
         {
             "id": 1,
             "nombre": "Electrónica"
         },
         {
             "id": 2,
-            "nombre": "Ropa"            
+            "nombre": "Ropa"
         },
         {
             "id": 3,
             "nombre": "Jardin"
         }
     ],
-    "productos":[
-        {
-            "id": 1,
-            "nombre": "Portátil",
-            "precio": 899,
-            "id_categoria": 1
-        },
-        {
-            "id": 2,
-            "nombre": "Camiseta",
-            "precio": 25,
-            "id_categoria": 2
-        },
+    "productos": [
         {
             "id": 3,
             "nombre": "Hamaca",
-            "precio": 40,
+            "precio": 45.0,
             "id_categoria": 3
+        },
+        {
+            "id": 5,
+            "nombre": "Papel",
+            "precio": 12.0,
+            "id_categoria": 1
+        },
+        {
+            "id": 6,
+            "nombre": "pollascas",
+            "precio": 999.0,
+            "id_categoria": 1
         }
     ]
-
 }

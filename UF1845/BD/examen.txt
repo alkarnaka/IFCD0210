@@ -1,0 +1,46 @@
+ 
+Parte práctica 
+ 
+1.- Escribe un programa que: 
+1.  Pida al usuario su nombre completo. 
+2.  Muestre: 
+○  El nombre en mayúsculas. 
+○  El nombre en minúsculas. 
+○  El número total de caracteres (incluyendo espacios). 
+○  El nombre sin espacios al inicio ni al final. 
+ 
+2.- Crea una lista con 5 números introducidos por el usuario. 
+1.  Muestra: 
+○  La lista completa. 
+○  El número mayor. 
+○  El número menor. 
+○  La suma total de los números. 
+ 
+3.- Crea un programa que: 
+1.  Solicite al usuario: Nombre, Edad y Ciudad. 
+2.  Guarde los datos en un diccionario. 
+3.  Muestre un mensaje como: "Juan tiene 25 años y vive en Madrid." 
+ 
+ 
+4.- Define una función llamada area_rectangulo(base, altura) que devuelva el área. 
+1.  Pide al usuario base y altura. 
+2.  Muestra el resultado llamando a la función. 
+NOTA: Validar que los valores sean positivos. 
+5.- Sistema Básico de Gestión de Inventario 
+Desarrollar un programa que permita gestionar un inventario utilizando: 
+●  Diccionarios 
+●  Bucles 
+●  Condicionales 
+ 
+Crea un programa que gestione un inventario de una tienda. 
+El inventario debe almacenarse en un diccionario con la siguiente estructura: 
+inventario = { 
+ "manzanas": 10, 
+ "peras": 5,  
+ "naranjas": 8 } 
+El programa debe mostrar el siguiente menú repetidamente hasta que el usuario decida salir: 
+1.  Mostrar inventario 
+2.  Añadir producto 
+3.  Actualizar cantidad 
+4.  Eliminar producto 
+5.  Salir

@@ -1,0 +1,28 @@
+{%extends 'base.html'%}
+
+{% block title %}Crear{%endblock%}
+
+{% block content %}
+
+<body>
+    <h1>Crear producto</h1>
+    <form action="" method="POST">
+        <label for="">Código</label>
+        <input type="text" name="codigo">
+        <label for="">Nombre</label>
+        <input type="text" name="nombre">
+
+        <label for="">Precio</label>
+        <input type="number" step="0.01" name="precio">
+        <label for="">Cantidad</label>
+        <input type="number" name="cantidad">
+        <label for="">Fecha Caducidad</label>
+        <input type="date" name="fecha_caducidad">
+        <button type="submit">Crear</button>
+    </form>
+
+    <p>
+        <a href="{{url_for('index')}}">Volver</a>
+    </p>
+
+{%endblock%}
