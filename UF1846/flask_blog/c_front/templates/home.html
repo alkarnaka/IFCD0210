@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{%block content%}
+<h1>Listado de posts</h1>
+{% for post in posts %}
+    <div class="post">
+        <h2>{{post.titulo}}</h2>
+        <p class="post-meta">{{post.f_alta}}</p>
+        <p><a href="post/{{post.id}}" class="btn">Leer</a></p>
+    </div>
+{%endfor%}
+{%endblock%}
