@@ -1,0 +1,77 @@
+# Parte práctica
+
+## 1. Aplicación interna para empleados
+
+Debe utilizar una intranet.
+
+### Medidas básicas de seguridad
+
+- Autenticación (usuario/contraseña, idealmente con doble factor)
+- Control de accesos por roles
+- Uso de HTTPS
+- Firewall interno
+- Monitorización de accesos
+
+## 2. Despliegue en servidor Linux
+
+### Pasos básicos
+
+- Preparar el servidor (actualizar sistema)
+- Instalar servidor web (Apache o Nginx)
+- Instalar entorno necesario (Node.js, PHP, Python, etc.)
+- Configurar base de datos
+- Subir la aplicación al servidor
+- Configurar dominio y DNS
+- Habilitar HTTPS (certificado SSL)
+- Probar funcionamiento
+- Configurar seguridad (firewall, permisos)
+- Monitorización y logs
+
+## 3. Pérdida de datos y backup
+
+### Un sistema de backup permite
+
+- Restaurar datos desde copias previas
+- Minimizar pérdida de información
+- Reducir tiempo de inactividad
+
+### Proceso
+
+- Identificar último backup válido
+- Restaurar base de datos o archivos
+- Verificar integridad
+- Reanudar servicio
+
+### Idealmente
+
+- Backups automáticos
+- Copias en distintas ubicaciones
+- Pruebas periódicas de restauración
+
+## 4. Almacenamiento de grandes volúmenes de datos
+
+Usaría una base de datos escalable:
+
+- Relacional (MySQL, PostgreSQL)
+- NoSQL (MongoDB)
+
+### Aspectos a considerar
+
+- Escalabilidad (horizontal/vertical)
+- Rendimiento (indexación)
+- Seguridad
+- Replicación
+- Alta disponibilidad
+- Copias de seguridad
+
+## 5. Error tras actualización
+
+### Proceso
+
+- Revisar logs del sistema
+- Identificar cambios recientes
+- Reproducir el error
+- Revisar dependencias
+- Aplicar rollback si es necesario
+- Corregir el problema
+- Probar en entorno de desarrollo antes de producción
